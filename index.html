@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Texto</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./Semantic/semantic.css">
+   
+</head>
+<body>
+    <div class="main-container">
+        <div class="ui segments">
+            <!-- Encabezado -->
+            <div class="ui segment">
+                <h2 class="ui header center aligned">
+                    <i class="search icon"></i>
+                    <div class="content">
+                        Validador de Texto
+                        <div class="sub header">Analiza y valida diferentes formatos de texto</div>
+                    </div>
+                </h2>
+            </div>
+
+            <!-- Formulario Principal -->
+            <div class="ui segment">
+                <form id="validationForm" class="ui form">
+                    <div class="field">
+                        <label>
+                            <i class="edit icon"></i>
+                            Texto a analizar
+                        </label>
+                        <textarea id="textInput" placeholder="Ingrese el texto que desea analizar..."></textarea>
+                    </div>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label>
+                                <i class="settings icon"></i>
+                                Tipo de validación
+                            </label>
+                            <select id="operationType" class="ui dropdown">
+                                <option value="email">Buscar emails</option>
+                                <option value="phone">Buscar teléfonos</option>
+                                <option value="quotes">Extraer texto entre comillas</option>
+                                <option value="clean">Limpiar caracteres especiales</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>&nbsp;</label>
+                            <button class="ui primary fluid button" type="submit">
+                                <i class="play icon"></i>
+                                Procesar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Resultados -->
+            <div class="ui segment">
+                <h4 class="ui horizontal divider header">
+                    <i class="chart bar icon"></i>
+                    Resultados
+                </h4>
+                <div id="resultContainer">
+                    <!-- Los resultados se mostrarán aquí -->
+                    <div class="ui placeholder">
+                        <div class="paragraph">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+    <!-- Scripts -->
+    
+    <script src="./Semantic/semantic.js"></script>
+    <script src="./validacion.js"></script>
+    <script src="./estilo.js"></script>
+    
+</body>
+</html>
